@@ -58,6 +58,9 @@ Database.prototype.ROLLBACK = function(){
 	}
 
 }
+Database.prototype.END = function(){
+	//End Program?
+}
 
 
 var lol  = new Database();
@@ -92,6 +95,8 @@ var execute = function(command){
 			lol.COMMIT()
 		} else if(instruction[0] === "ROLLBACK"){
 			lol.ROLLBACK()
+		} else if(instruction[0] === "END"){
+			lol.END()
 		}
 	}
 }
